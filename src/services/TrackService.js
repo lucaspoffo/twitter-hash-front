@@ -13,7 +13,7 @@ class TrackService {
 
   static async deleteTrack(id) {
     try {
-      let response = await axios.delete("/hashtag_filters/" + id);
+      await axios.delete("/hashtag_filters/" + id);
       console.log("Successfuly deleted track");
     } catch (e) {
       console.error("Failed to delete tracks", e);

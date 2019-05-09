@@ -2,13 +2,20 @@ import React, { useState } from "react";
 import Input from "@material-ui/core/Input";
 import { withStyles } from "@material-ui/core/styles";
 import AddIcon from "@material-ui/icons/Add";
-import Icon from "@material-ui/core/Icon";
 import Fab from "@material-ui/core/Fab";
 
-const styles = {};
+const styles = {
+  root: {
+    "max-width": 900,
+    margin: "auto",
+    "text-align": "left"
+  }
+};
 
 function TextFieldAdd(props) {
-  const { onAdd } = props;
+  const { onAdd, classes, color } = props;
+
+  console.log("color", color);
 
   const [text, setText] = useState([]);
 
@@ -30,17 +37,18 @@ function TextFieldAdd(props) {
   }
 
   return (
-    <div>
+    <div className={classes.root}>
       <Input
         onChange={onTextChange}
         onKeyPress={onKeyPress}
+        color={color}
         value={text}
         placeholder="Placeholder"
         inputProps={{
           "aria-label": "Description"
         }}
       />
-      <Fab onClick={handleAdd} color="primary" aria-label="Add" size="small">
+      <Fab color={color} onClick={handleAdd} aria-label="Add" size="small">
         <AddIcon />
       </Fab>
     </div>

@@ -41,7 +41,7 @@ function Table(props) {
         setTotal(resp.total);
         setPerPage(resp.perPage);
       });
-  }, [hashtags]);
+  }, [hashtags, tweetService]);
 
   return (
     <div>

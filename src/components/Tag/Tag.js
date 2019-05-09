@@ -1,16 +1,24 @@
-import React, { useState } from "react";
-import { withStyles } from "@material-ui/core/styles";
+import React from "react";
 import Chip from "@material-ui/core/Chip";
+import { withStyles } from "@material-ui/core/styles";
+
+const styles = {
+  root: {
+    "max-width": 900,
+    margin: "auto",
+    "text-align": "left"
+  }
+};
 
 function Tag(props) {
-  const { tags, onDelete } = props;
+  const { tags, onDelete, classes, color } = props;
 
   return (
-    <div>
+    <div className={classes.root}>
       {tags.map((tag, index) => (
         <Chip
           key={index}
-          color="primary"
+          color={color}
           variant="outlined"
           label={tag}
           onDelete={() => onDelete(index)}
@@ -20,4 +28,4 @@ function Tag(props) {
   );
 }
 
-export default Tag;
+export default withStyles(styles)(Tag);

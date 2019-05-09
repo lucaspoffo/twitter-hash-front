@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import {
   Table,
@@ -47,12 +46,8 @@ function renderTweet(tweet, classes) {
   );
 }
 
-function handleChangePage(event, page) {
-  //this.setState({ page });
-}
-
-function SimpleTable(props) {
-  const { classes, tweets, total, link } = props;
+function TweetTable(props) {
+  const { classes, tweets } = props;
 
   return (
     <div>
@@ -73,8 +68,4 @@ function SimpleTable(props) {
   );
 }
 
-/*SimpleTable.propTypes = {
-  classes: PropTypes.object.isRequired
-};*/
-
-export default withStyles(styles)(SimpleTable);
+export default withStyles(styles)(TweetTable);
