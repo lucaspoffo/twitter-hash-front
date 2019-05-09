@@ -59,7 +59,7 @@ function App(props) {
       <Typography variant="h3" gutterBottom className={classes.header}>
         Hashtags being tracked
       </Typography>
-      <TextFieldAdd onAdd={onTrackAdd} color="secondary" />
+      <TextFieldAdd onAdd={onTrackAdd} color="secondary" placeholder="Insert hashtag to track" />
       <Tag
         tags={tracks.map(t => t.text)}
         onDelete={onTrackDelete}
@@ -68,7 +68,7 @@ function App(props) {
       <Typography variant="h3" gutterBottom className={classes.header}>
         Tweet search, filter by hashtags
       </Typography>
-      <TextFieldAdd onAdd={onFilterTagAdd} color="primary" />
+      <TextFieldAdd onAdd={onFilterTagAdd} color="primary" placeholder="Insert hashtag to filter"/>
       <Tag tags={hashtags} onDelete={onFilterTagDelete} color="primary" />
       <Table tweetService={TweetService} hashtags={hashtags} />
     </div>

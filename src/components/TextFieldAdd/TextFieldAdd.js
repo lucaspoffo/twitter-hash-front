@@ -13,7 +13,7 @@ const styles = {
 };
 
 function TextFieldAdd(props) {
-  const { onAdd, classes, color } = props;
+  const { onAdd, classes, color, placeholder } = props;
 
   console.log("color", color);
 
@@ -43,7 +43,7 @@ function TextFieldAdd(props) {
         onKeyPress={onKeyPress}
         color={color}
         value={text}
-        placeholder="Placeholder"
+        placeholder={placeholder}
         inputProps={{
           "aria-label": "Description"
         }}
