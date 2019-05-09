@@ -15,8 +15,6 @@ const styles = {
 function TextFieldAdd(props) {
   const { onAdd, classes, color, placeholder } = props;
 
-  console.log("color", color);
-
   const [text, setText] = useState([]);
 
   function handleAdd() {
