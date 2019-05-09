@@ -1,11 +1,15 @@
 # [Twitter Hashtag Front](https://twitter-hash-front.herokuapp.com/)
 
-Site statico que consome a API do twitter-hash-back. 
+Site estático que consome a API do twitter-hash-back. 
 
 
 ## React
 
-Foi criado um utilizando create-react-app, com componentes do material-ui e axious para realização das HTTP requests.
+Foi criado um utilizando create-react-app, com componentes do material-ui.Foi utilizado o axios para realização das HTTP requests.
+
+- [Create-react-app](https://github.com/facebook/create-react-app)
+- [Material-ui](https://material-ui.com/)
+- [Axios](https://github.com/axios/axios)
 
 ## Instalação
 
