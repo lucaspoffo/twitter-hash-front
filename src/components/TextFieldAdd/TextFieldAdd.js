@@ -15,7 +15,7 @@ const styles = {
 function TextFieldAdd(props) {
   const { onAdd, classes, color, placeholder } = props;
 
-  const [text, setText] = useState([]);
+  const [text, setText] = useState("");
 
   function handleAdd() {
     if (!text) return;
